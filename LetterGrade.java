@@ -2,43 +2,43 @@
 * File: LetterGrade.java
 * Author: Khoger Dosky
 * Date: January 21, 2020
-* Purpose: This program will generate a letter grade based one test score
+* Purpose: This program will generate a letter grade based on one test score
 */
 
-// Import each required Java class
 import java.util.Scanner;
 
 public class LetterGrade {
-   
-
     public static void main(String[] args) {
-    
-    // Variable to hold values
-    int testScore;
-    char grade;
-    Scanner scannerIn = new Scanner(System.in);
+        // Variables to hold values
+        int testScore;
+        char grade = 'F'; // Default to 'F', will be overridden if score is higher
+
+        // Create a Scanner object for input
+        Scanner scannerIn = new Scanner(System.in);
         
-        // Promt user to enter test score to see letter grade     
+        // Prompt user to enter test score to see letter grade     
         System.out.print("Enter your test score to see your letter grade: ");
         testScore = scannerIn.nextInt();
-       
-        if (90 <= testScore) {
+        
+        // Close the scanner
+        scannerIn.close();
+
+        // Determine the grade
+        if (testScore >= 90) {
             grade = 'A';
-        }
-        else if (80 <= testScore) {
+        } else if (testScore >= 80) {
             grade = 'B';
-        }
-        else if (70 <= testScore) {
+        } else if (testScore >= 70) {
             grade = 'C';
-        }
-        else if (60 <= testScore) {
+        } else if (testScore >= 60) {
             grade = 'D';
-        }
-        else if (0 <= testScore) {
-            grade = 'F';
-        }
-        else {
-        System.out.print("Your grade is: " + grade);
+        } // No need for the 'F' condition as it's the default
+
+        // Validate score range
+        if (testScore < 0 || testScore > 100) {
+            System.out.println("Invalid test score. Please enter a score between 0 and 100.");
+        } else {
+            System.out.println("Your grade is: " + grade);
         }
     }
 }

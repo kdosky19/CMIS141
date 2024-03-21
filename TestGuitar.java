@@ -5,7 +5,7 @@
  * Brief purpose of the program: Homework 2 – java class for a guitar 
  */
 
-import javafx.scene.paint.Color;
+
 
 
 public class TestGuitar extends Guitar{

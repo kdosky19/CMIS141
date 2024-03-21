@@ -6,7 +6,8 @@
  */
 
 import java.util.Random;
-import javafx.scene.paint.Color;
+import java.awt.Color;
+
 
 public class Guitar {
 
@@ -43,12 +44,14 @@ public class Guitar {
     }
 
     public String getGuitarColor() {
+
+        final Color BROWN = new Color(165, 42, 42);
         
         String colorName = "Unknown";
         if (this.guitarColor.equals(Color.RED)) colorName = "Red";
         else if (this.guitarColor.equals(Color.BLUE)) colorName = "Blue";
         else if (this.guitarColor.equals(Color.BLACK)) colorName = "Black";
-        else if (this.guitarColor.equals(Color.BROWN)) colorName = "Brown";
+        else if (this.guitarColor.equals(BROWN)) colorName = "Brown";
         else if (this.guitarColor.equals(Color.WHITE)) colorName = "White";
         return colorName;
     }

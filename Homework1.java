@@ -11,6 +11,7 @@ import java.text.DecimalFormat;
 
 public class Homework1 {
 
+        @SuppressWarnings("resource")
         public static void main(String[] args){
 
         //class for scanner
